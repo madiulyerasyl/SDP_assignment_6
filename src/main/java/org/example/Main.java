@@ -47,5 +47,21 @@ public class Main {
 
         project.accept(statistics);
         statistics.printReport();
+
+
+        QualityGateVisitor quality = new QualityGateVisitor();
+
+        project.accept(quality);
+
+        quality.printReport();
+
+
+        ComplianceVisitor compliance = new ComplianceVisitor();
+
+        project.accept(compliance);
+
+        compliance.printReport();
+
+
     }
 }
