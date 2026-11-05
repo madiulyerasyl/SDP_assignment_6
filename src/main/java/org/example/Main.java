@@ -63,5 +63,13 @@ public class Main {
         compliance.printReport();
 
 
+        TechnicalDebtVisitor technicalDebt = new TechnicalDebtVisitor();
+
+        project.accept(technicalDebt);
+
+        technicalDebt.printReport();
+
+
+
     }
 }
